@@ -1,5 +1,4 @@
-﻿using Entities.Abstract;
-using Entities.Concrete;
+﻿using Core.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +6,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccess.Abstract
+namespace Core.DataAccess
 {
     // T , referans tip olmalı ve T  IEntity olabilir yada IEntity implemente eden bir nesne olabilir.
     //new lenebilir olmalı IEntity interface dir ve newlenemez böylece sadece  IEntity implemente eden bir nesne olabilir.
