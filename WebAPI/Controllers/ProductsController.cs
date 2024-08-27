@@ -14,7 +14,7 @@ namespace WebAPI.Controllers
         {
             return new List<Product>
             {
-                new Product { ProductId = 1, ProductName = "Elma" },
+                new Product { ProductId = 1,  ProductName = "Elma" },
                 new Product { ProductId = 2, ProductName = "Armut" }
             };
            
