@@ -11,6 +11,8 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+//AddSingelton :arka planda referans olu?turma 
+//Controllerde IProuctService ça?r?ld???nda arka planda ProductManager olu?tur onu ver
 builder.Services.AddSingleton<IProductService, ProductManager>();
 builder.Services.AddSingleton<IProductDal, EfProductDal>();
 var app = builder.Build();
