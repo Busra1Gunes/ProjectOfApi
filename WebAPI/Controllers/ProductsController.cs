@@ -20,13 +20,35 @@ namespace WebAPI.Controllers
             //IoC Container--Inversion of Control 
             _productService = productService;
         }
-        [HttpGet]
-        public List<Product> Get()
+        [HttpGet("GetAll")]
+        //IActionResult
+        public IActionResult GetAll()
         { 
            
             var result=_productService.GetAll();
-            return result.Data;
+            if (result.Success) return Ok(result.Data);
+            return BadRequest(result);
            
+        }
+        [HttpPost]
+        public IActionResult Add(Product product)
+        {
+         var result=  _productService.Add(product);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+        }
+
+        [HttpGet("GetById")]
+        public IActionResult GetById(int id) 
+        {
+            var result=_productService.GetById(id);
+            if (result.Success) return Ok(result);
+            return BadRequest(result);
+
+
         }
 
     }
