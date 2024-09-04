@@ -1,6 +1,8 @@
 ﻿using Business.Abstract;
 using Business.Constans;
 using Business.DependencyResolvers.ValidationRules.FluentValidation;
+using Core.Aspects.Autofac.Validation;
+using Core.CrossCuttingConcerns.Validation;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
@@ -23,16 +25,9 @@ namespace Business.Concrete
             _productDal = productDal;
         }
         // [LogAspect] --> AOP, Autofac ,AOP imkanı sunar
+        [ValidationAspect(typeof(ProductValidator))]
         public IResult Add(Product product)
-        {
-            var context=new ValidationContext<Product>(product);
-            ProductValidator productValidator=new ();
-            var result=productValidator.Validate (context);
-            if(!result.IsValid)
-            {
-                throw new FluentValidation.ValidationException(result.Errors);
-            }
-
+        {           
             //business codes 
             _productDal.Add(product);
             return new SuccessResult(Messages.ProductAddes);
