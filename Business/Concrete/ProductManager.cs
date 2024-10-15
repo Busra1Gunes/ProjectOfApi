@@ -1,4 +1,5 @@
 ﻿using Business.Abstract;
+using Business.CCS;
 using Business.Constans;
 using Business.DependencyResolvers.ValidationRules.FluentValidation;
 using Core.Aspects.Autofac.Validation;
@@ -20,17 +21,23 @@ namespace Business.Concrete
     public class ProductManager : IProductService
     {
         IProductDal _productDal;
-        public ProductManager(IProductDal productDal)
+        ILogger _logger;
+        public ProductManager(IProductDal productDal, ILogger logger)
         {
             _productDal = productDal;
+            _logger = logger;
         }
         // [LogAspect] --> AOP, Autofac ,AOP imkanı sunar
+        //Validation nesnenin yapısal olarak uygun olup olmadığını kontrol eder
         [ValidationAspect(typeof(ProductValidator))]
         public IResult Add(Product product)
-        {           
-            //business codes 
-            _productDal.Add(product);
-            return new SuccessResult(Messages.ProductAddes);
+        {
+            
+                //business codes 
+                _productDal.Add(product);
+                return new SuccessResult(Messages.ProductAddes);
+          
+           
         }
 
         public IDataResult<List<Product>> GetAll()

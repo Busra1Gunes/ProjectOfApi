@@ -1,6 +1,7 @@
 ﻿using Autofac;
 using Autofac.Extras.DynamicProxy;
 using Business.Abstract;
+using Business.CCS;
 using Business.Concrete;
 using Castle.DynamicProxy;
 using Core.Utilities.Interceptors;
@@ -21,8 +22,7 @@ namespace Business.DependencyResolvers.Autofac
             //Birisi senden IProductService isterse ona ProductManager registe et
             builder.RegisterType<ProductManager>().As<IProductService>().SingleInstance();
             builder.RegisterType<EfProductDal>().As<IProductDal>().SingleInstance();
-
-
+            builder.RegisterType<FileLogger>().As<ILogger>().SingleInstance();
 
 
 
