@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataAccess.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20240822114222_mig_1")]
+    [Migration("20241017130646_mig_1")]
     partial class mig_1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -110,6 +110,9 @@ namespace DataAccess.Migrations
 
                     b.Property<short>("UnitsInStock")
                         .HasColumnType("smallint");
+
+                    b.Property<string>("fotograf")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ProductId");
 

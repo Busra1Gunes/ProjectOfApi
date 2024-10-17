@@ -22,6 +22,10 @@ namespace Business.DependencyResolvers.Autofac
             //Birisi senden IProductService isterse ona ProductManager registe et
             builder.RegisterType<ProductManager>().As<IProductService>().SingleInstance();
             builder.RegisterType<EfProductDal>().As<IProductDal>().SingleInstance();
+
+            builder.RegisterType<CategoryManager>().As<ICategoryService>().SingleInstance();
+            builder.RegisterType<EfCategoryDal>().As<ICategoryDal>().SingleInstance();
+
             builder.RegisterType<FileLogger>().As<ILogger>().SingleInstance();
 
 

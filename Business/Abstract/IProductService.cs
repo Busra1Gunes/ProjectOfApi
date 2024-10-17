@@ -1,4 +1,5 @@
 ﻿using Core.Utilities.Results;
+using Entities;
 using Entities.Concrete;
 using Entities.Dto;
 using System;
@@ -21,7 +22,9 @@ namespace Business.Abstract
 
 		IDataResult<Product> GetById(int productId);
 
-		IResult Add(Product product);
+		IResult Add(ProductDto product, string url);
+        IResult Update(Product product);
 
-	}
+
+    }
 }

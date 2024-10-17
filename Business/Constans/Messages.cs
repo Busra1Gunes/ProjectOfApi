@@ -13,5 +13,8 @@ namespace Business.Constans
         public static string ProdutNameInvalid = "Ürün ismi geçersiz"; //publicler camelCase 'e uymalıdır , private ise küçük harf ile yazılır
         public static string MaintenanceTime = "Sistemde bakım yapılıyor, Saat 22.00-00.00";
         public static string ProductsListed = "Ürünler Listelendi";
+        public static string ProductCountOfCategoryError="Bir kategoride en fazla 10 ürün olabilir";
+        public static string ProductNameAlreadyExists = "Aynı isimde başka bir ürün var";
+        public static string CategoryLimitExceded="Category Limiti Aşıldı";
     }
 }

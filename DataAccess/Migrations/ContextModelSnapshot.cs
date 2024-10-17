@@ -109,6 +109,9 @@ namespace DataAccess.Migrations
                     b.Property<short>("UnitsInStock")
                         .HasColumnType("smallint");
 
+                    b.Property<string>("fotograf")
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("ProductId");
 
                     b.ToTable("Products");

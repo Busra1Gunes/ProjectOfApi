@@ -1,8 +1,10 @@
 ﻿using Business.Abstract;
 using Business.Concrete;
 using DataAccess.Concrete.EntityFramework;
+using Entities;
 using Entities.Concrete;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.Extensions;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebAPI.Controllers
@@ -31,9 +33,11 @@ namespace WebAPI.Controllers
            
         }
         [HttpPost]
-        public IActionResult ProductAdd(Product product)
+        public IActionResult ProductAdd([FromForm] ProductDto product)
         {
-         var result=  _productService.Add(product);
+            var baseUri = new Uri(this.Request.GetEncodedUrl());
+            var baseUrl = $"{baseUri.GetLeftPart(UriPartial.Authority)}{this.Request.PathBase}/";
+            var result=  _productService.Add(product, baseUrl);
             if (result.Success)
             {
                 return Ok(result);

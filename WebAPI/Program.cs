@@ -1,10 +1,12 @@
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
+using AutoMapper;
 using Business.Abstract;
 using Business.Concrete;
 using Business.DependencyResolvers.Autofac;
 using DataAccess.Abstract;
 using DataAccess.Concrete.EntityFramework;
+using Service.Mapping;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,6 +16,20 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+//AutoMapper kullanmak için eklenir---------------AutoMapper------------
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddScoped(provider =>
+{
+    var httpContextAccessor = provider.GetRequiredService<IHttpContextAccessor>();
+    var mapperConfiguration = new MapperConfiguration(cfg =>
+    {
+        cfg.AddProfile(new MapProfile(httpContextAccessor));
+    });
+
+    return mapperConfiguration.CreateMapper();
+});
+//-------------------------------------------AutoMapper---------------------
+
 //AddSingelton :arka planda referans olu?turma 
 //Controllerde IProuctService ça?r?ld???nda arka planda ProductManager olu?tur onu ver
 //builder.Services.AddSingleton<IProductService, ProductManager>();
