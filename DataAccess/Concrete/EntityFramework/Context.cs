@@ -1,4 +1,5 @@
-﻿using Entities.Concrete;
+﻿using Core.Concrete;
+using Entities.Concrete;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -16,11 +17,14 @@ namespace DataAccess.Concrete.EntityFramework
         //Bu metod projenin hangi veritabanı şle ilişkili olduğunu belirler
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Data Source=AYZASOFT-0000;Integrated Security=True;Trust Server Certificate=True;Initial Catalog=Context");
+            optionsBuilder.UseSqlServer("Data Source=DESKOP123;Initial Catalog=Context;Integrated Security=True;Trust Server Certificate=True");
         }
         public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Order> Orders { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<OperationClaim> OperationClaims { get; set; }
+        public DbSet<UserOperationClaim> UserOperationClaims { get; set; }
     }
 }

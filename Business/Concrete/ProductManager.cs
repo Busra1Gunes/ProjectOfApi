@@ -40,7 +40,7 @@ namespace Business.Concrete
         [ValidationAspect(typeof(ProductValidator))]
         public IResult Add(ProductDto product, string url)
         {
-
+            //hangi şartlar altında ne zaman (join point) execute edileceği olgusuna aspect denir
             //business codes 
             IResult result = BusinessRules.Run(
                   CheckIfProductCountCategoryCorrect(product.CategoryId),

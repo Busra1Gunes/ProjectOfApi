@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Business.Abstract
 {
-	public interface IProductService
+    public interface IProductService
 	{
 		IDataResult<List<Product>> GetAll();
 

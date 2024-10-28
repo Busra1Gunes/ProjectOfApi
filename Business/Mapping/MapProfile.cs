@@ -2,6 +2,7 @@
 using Core;
 using Entities;
 using Entities.Concrete;
+using Entities.Dto;
 using Microsoft.AspNetCore.Http;
 
 namespace Service.Mapping
