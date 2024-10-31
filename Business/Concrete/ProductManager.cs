@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Business.Abstract;
+using Business.BusinessAspects.Autofac;
 using Business.CCS;
 using Business.Constans;
 using Business.DependencyResolvers.ValidationRules.FluentValidation;
@@ -37,6 +38,7 @@ namespace Business.Concrete
         }
         // [LogAspect] --> AOP, Autofac ,AOP imkanı sunar
         //Validation nesnenin yapısal olarak uygun olup olmadığını kontrol eder
+        [SecuredOperation("product.add,admin")]
         [ValidationAspect(typeof(ProductValidator))]
         public IResult Add(ProductDto product, string url)
         {
