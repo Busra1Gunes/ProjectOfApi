@@ -38,45 +38,75 @@ namespace Business.Concrete
         }
         // [LogAspect] --> AOP, Autofac ,AOP imkanı sunar
         //Validation nesnenin yapısal olarak uygun olup olmadığını kontrol eder
-        [SecuredOperation("product.add,admin")]
+        
+        //[SecuredOperation("product.add,admin")]
         [ValidationAspect(typeof(ProductValidator))]
         public IResult Add(ProductDto product, string url)
         {
-            //hangi şartlar altında ne zaman (join point) execute edileceği olgusuna aspect denir
-            //business codes 
+            // İş kuralları kontrolü
             IResult result = BusinessRules.Run(
-                  CheckIfProductCountCategoryCorrect(product.CategoryId),
-                  CheckIfProductNameExists(product.ProductName),
-                  CheckIfCategoryLimitExceded());
+                CheckIfProductCountCategoryCorrect(product.CategoryId),
+                CheckIfProductNameExists(product.ProductName),
+                CheckIfCategoryLimitExceded());
+
             if (result != null)
             {
                 return result;
-               
             }
+
+            // Fotoğraf yolu kaydetme işlemi
             string? sqlResimYolu = null;
+
             if (product.fotograf != null)
             {
-                var uzanti = Path.GetExtension(product.fotograf.FileName);
+                // Fotoğraf uzantısını kontrol ediyoruz
+                var uzanti = Path.GetExtension(product.fotograf.FileName).ToLower();
+                var allowedExtensions = new[] { ".jpg", ".jpeg", ".png" };
 
-                var tarihSaatDakikaSaniyeSalise = DateTime.Now.ToString("yyyyMMddHHmmssfff");
-                var resimYolu = $"wwwroot/ProductFoto/{tarihSaatDakikaSaniyeSalise}{uzanti}";
-                sqlResimYolu = $"{url}/ProductFoto/{tarihSaatDakikaSaniyeSalise}{uzanti}";
-
-                using (var stream = new FileStream(resimYolu, FileMode.Create))
+                if (!allowedExtensions.Contains(uzanti))
                 {
-                    product.fotograf.CopyTo(stream);
+                    return new ErrorResult("Geçersiz dosya formatı. Sadece JPG ve PNG kabul edilmektedir.");
+                }
+
+                // Klasör var mı kontrol ediyoruz, yoksa oluşturuyoruz
+                var klasorYolu = "wwwroot/ProductFoto";
+                if (!Directory.Exists(klasorYolu))
+                {
+                    Directory.CreateDirectory(klasorYolu);
+                }
+
+                // Benzersiz dosya adı oluşturuluyor
+                var tarihSaatDakikaSaniyeSalise = DateTime.Now.ToString("yyyyMMddHHmmssfff");
+                var resimYolu = Path.Combine(klasorYolu, $"{tarihSaatDakikaSaniyeSalise}{uzanti}");
+                sqlResimYolu = $"{url}ProductFoto/{tarihSaatDakikaSaniyeSalise}{uzanti}";
+
+                try
+                {
+                    using (var stream = new FileStream(resimYolu, FileMode.Create))
+                    {
+                        product.fotograf.CopyTo(stream);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    return new ErrorResult($"Fotoğraf kaydedilirken bir hata oluştu: {ex.Message}");
                 }
             }
+
+            // Veritabanı için Product nesnesine dönüştürme
             Product product1 = _mapper.Map<Product>(product);
+            product1.fotograf = sqlResimYolu; // Fotoğraf yolunu Product nesnesine ekliyoruz
+
             _productDal.Add(product1);
+
             return new SuccessResult(Messages.ProductAddes);
         }
 
         public IDataResult<List<Product>> GetAll()
         {
-            if (DateTime.Now.Hour == 11) return new ErrorDataResult<List<Product>>(Messages.MaintenanceTime);
+            if (DateTime.Now.Hour == 15) return new ErrorDataResult<List<Product>>(Messages.MaintenanceTime);
 
-            return new SuccessDataResult<List<Product>>(_productDal.GetAll(p => p.CategoryId == 3), Messages.ProductsListed);
+            return new SuccessDataResult<List<Product>>(_productDal.GetAll(), Messages.ProductsListed);
         }
 
         public IDataResult<List<Product>> GetAllByCategoryId(int id)

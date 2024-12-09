@@ -1,5 +1,6 @@
 ﻿using Business.Abstract;
 using Entities.Dtos;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -35,6 +36,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpPost("register")]
+        [Authorize]
         public ActionResult Register(UserForRegisterDto userForRegisterDto)
         {
             var userExists = _authService.UserExists(userForRegisterDto.Email);
