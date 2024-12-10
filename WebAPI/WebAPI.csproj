@@ -18,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="wwwroot\CommentFoto\" />
     <Folder Include="wwwroot\ProductFoto\" />
   </ItemGroup>
 

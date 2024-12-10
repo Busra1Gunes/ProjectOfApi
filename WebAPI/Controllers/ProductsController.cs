@@ -4,6 +4,7 @@ using DataAccess.Concrete.EntityFramework;
 using Entities;
 using Entities.Concrete;
 using Entities.Dto;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.Extensions;
 using Microsoft.AspNetCore.Mvc;
@@ -25,6 +26,7 @@ namespace WebAPI.Controllers
         }
         [HttpGet("GetAll")]
         //IActionResult
+        [Authorize]
         public IActionResult GetAll()
         { 
            
@@ -38,13 +40,16 @@ namespace WebAPI.Controllers
         {
             var baseUri = new Uri(this.Request.GetEncodedUrl());
             var baseUrl = $"{baseUri.GetLeftPart(UriPartial.Authority)}{this.Request.PathBase}/";
-            var result=  _productService.Add(product, baseUrl);
+            var result = _productService.Add(product, baseUrl);
+
             if (result.Success)
             {
                 return Ok(result);
             }
+
             return BadRequest(result);
         }
+
 
         [HttpGet("GetById")]
         public IActionResult GetById(int id) 
