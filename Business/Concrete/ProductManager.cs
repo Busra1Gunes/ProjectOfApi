@@ -161,7 +161,7 @@ namespace Business.Concrete
         }
         private IResult CheckIfCategoryLimitExceded()
         {
-            var result = _categoryService.GetAll().Data.Count; //var mı?
+            var result = _categoryService.GetAllAsync().Data.Count; //var mı?
             if (result>15)
             {
                 return new ErrorResult(Messages.CategoryLimitExceded);
