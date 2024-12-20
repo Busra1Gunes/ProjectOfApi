@@ -1,9 +1,11 @@
 ﻿using Core.Concrete;
 using Entities.Concrete;
+using Entities.Seeds;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,9 +19,16 @@ namespace DataAccess.Concrete.EntityFramework
         //Bu metod projenin hangi veritabanı şle ilişkili olduğunu belirler
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Data Source=DESKOP123;Initial Catalog=Context;Integrated Security=True;Trust Server Certificate=True");
-        }
-        public DbSet<Product> Products { get; set; }
+            optionsBuilder.UseSqlServer("Data Source=DESKTOP-IUMMNFO\\SQLEXPRESS01;Initial Catalog=SocialBelieve;Integrated Security=True;Trust Server Certificate=True");
+			
+		}
+		protected override void OnModelCreating(ModelBuilder modelBuilder)
+		{
+			
+			modelBuilder.ApplyConfiguration(new CategorySeed());
+			
+		}
+		public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Order> Orders { get; set; }

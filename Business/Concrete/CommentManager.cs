@@ -66,9 +66,8 @@ namespace Business.Concrete
                 }
             }
 
-            // Veritabanı için comment nesnesine dönüştürme
             Comment comment1 = _mapper.Map<Comment>(comment);
-            comment1.fotograf = sqlResimYolu; // Fotoğraf yolunu comment nesnesine ekliyoruz
+            comment1.fotograf = sqlResimYolu;  
 
             _commentDal.Add(comment1);
 

@@ -17,6 +17,12 @@ namespace Service.Mapping
             CreateMap<Product, ProductDto>()
                 //.ForMember(dest => dest., opt => opt.MapFrom(x => x.Rol.ad))
                 .ReverseMap();
-        }
+			CreateMap<Category, CategoryDto>()
+			  .ReverseMap();
+            CreateMap<Category, CreateCategoryDto>()
+				.ReverseMap(); 
+            CreateMap<Category, UpdateCategoryDto>()
+				.ReverseMap();
+		}
     }
 }
