@@ -19,7 +19,7 @@ namespace DataAccess.Concrete.EntityFramework
         //Bu metod projenin hangi veritabanı şle ilişkili olduğunu belirler
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Data Source=DESKTOP-IUMMNFO\\SQLEXPRESS01;Initial Catalog=SocialBelieve;Integrated Security=True;Trust Server Certificate=True");
+            optionsBuilder.UseSqlServer("Data Source=DESKOP123;Initial Catalog=SocialBelieve;Integrated Security=True;Trust Server Certificate=True");
 			
 		}
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -36,5 +36,6 @@ namespace DataAccess.Concrete.EntityFramework
         public DbSet<OperationClaim> OperationClaims { get; set; }
         public DbSet<UserOperationClaim> UserOperationClaims { get; set; }
         public DbSet<Comment> Comments { get; set; }
+        public DbSet<Email> Emails { get; set; }
     }
 }

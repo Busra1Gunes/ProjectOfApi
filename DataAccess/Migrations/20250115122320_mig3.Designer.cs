@@ -4,6 +4,7 @@ using DataAccess.Concrete.EntityFramework;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataAccess.Migrations
 {
     [DbContext(typeof(Context))]
-    partial class ContextModelSnapshot : ModelSnapshot
+    [Migration("20250115122320_mig3")]
+    partial class mig3
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -131,442 +133,442 @@ namespace DataAccess.Migrations
                         new
                         {
                             CategoryId = 1,
-                            CreatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(1960),
+                            CreatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(8990),
                             IsActive = true,
                             Name = "Elektronik",
-                            UpdatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(1958)
+                            UpdatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(8988)
                         },
                         new
                         {
                             CategoryId = 2,
-                            CreatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(1961),
+                            CreatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(8991),
                             IsActive = true,
                             Name = "Ev ve Yaşam",
-                            UpdatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(1961)
+                            UpdatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(8990)
                         },
                         new
                         {
                             CategoryId = 3,
-                            CreatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(1962),
+                            CreatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(8992),
                             IsActive = true,
                             Name = "Moda",
-                            UpdatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(1962)
+                            UpdatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(8992)
                         },
                         new
                         {
                             CategoryId = 4,
-                            CreatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(1963),
+                            CreatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(8997),
                             IsActive = true,
                             Name = "Spor ve Outdoor",
-                            UpdatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(1963)
+                            UpdatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(8996)
                         },
                         new
                         {
                             CategoryId = 5,
-                            CreatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(1965),
+                            CreatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(8998),
                             IsActive = true,
                             Name = "Kitap, Müzik, Film",
-                            UpdatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(1964)
+                            UpdatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(8997)
                         },
                         new
                         {
                             CategoryId = 6,
-                            CreatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(1966),
+                            CreatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(8999),
                             IsActive = true,
                             Name = "Anne ve Bebek",
-                            UpdatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(1965)
+                            UpdatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(8999)
                         },
                         new
                         {
                             CategoryId = 7,
-                            CreatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(1967),
+                            CreatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9000),
                             IsActive = true,
                             Name = "Sağlık ve Kişisel Bakım",
-                            UpdatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(1966)
+                            UpdatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(8999)
                         },
                         new
                         {
                             CategoryId = 8,
-                            CreatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(1968),
+                            CreatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9001),
                             IsActive = true,
                             Name = "Oyun ve Hobi",
-                            UpdatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(1967)
+                            UpdatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9000)
                         },
                         new
                         {
                             CategoryId = 9,
-                            CreatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(1969),
+                            CreatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9002),
                             IsActive = true,
                             Name = "Otomobil ve Motosiklet",
-                            UpdatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(1968)
+                            UpdatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9001)
                         },
                         new
                         {
                             CategoryId = 10,
-                            CreatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(1970),
+                            CreatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9003),
                             IsActive = true,
                             Name = "Ofis ve Kırtasiye",
-                            UpdatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(1969)
+                            UpdatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9002)
                         },
                         new
                         {
                             CategoryId = 11,
-                            CreatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(1971),
+                            CreatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9004),
                             IsActive = true,
                             Name = "Telefonlar",
                             ParentCategoryId = 1,
-                            UpdatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(1970)
+                            UpdatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9003)
                         },
                         new
                         {
                             CategoryId = 12,
-                            CreatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(1972),
+                            CreatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9005),
                             IsActive = true,
                             Name = "Bilgisayarlar",
                             ParentCategoryId = 1,
-                            UpdatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(1971)
+                            UpdatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9004)
                         },
                         new
                         {
                             CategoryId = 13,
-                            CreatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(1973),
+                            CreatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9006),
                             IsActive = true,
                             Name = "Televizyon ve Ses Sistemleri",
                             ParentCategoryId = 1,
-                            UpdatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(1973)
+                            UpdatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9005)
                         },
                         new
                         {
                             CategoryId = 14,
-                            CreatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(1974),
+                            CreatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9007),
                             IsActive = true,
                             Name = "Aksesuarlar",
                             ParentCategoryId = 1,
-                            UpdatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(1974)
+                            UpdatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9006)
                         },
                         new
                         {
                             CategoryId = 15,
-                            CreatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(1975),
+                            CreatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9008),
                             IsActive = true,
                             Name = "Fotoğraf ve Kamera",
                             ParentCategoryId = 1,
-                            UpdatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(1975)
+                            UpdatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9007)
                         },
                         new
                         {
                             CategoryId = 16,
-                            CreatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(1976),
+                            CreatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9009),
                             IsActive = true,
                             Name = "Akıllı Ev Ürünleri",
                             ParentCategoryId = 1,
-                            UpdatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(1976)
+                            UpdatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9008)
                         },
                         new
                         {
                             CategoryId = 17,
-                            CreatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(1978),
+                            CreatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9010),
                             IsActive = true,
                             Name = "Tabletler",
                             ParentCategoryId = 1,
-                            UpdatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(1977)
+                            UpdatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9009)
                         },
                         new
                         {
                             CategoryId = 18,
-                            CreatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(1980),
+                            CreatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9011),
                             IsActive = true,
                             Name = "Mobilya",
                             ParentCategoryId = 2,
-                            UpdatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(1979)
+                            UpdatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9010)
                         },
                         new
                         {
                             CategoryId = 19,
-                            CreatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(1981),
+                            CreatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9012),
                             IsActive = true,
                             Name = "Dekorasyon",
                             ParentCategoryId = 2,
-                            UpdatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(1980)
+                            UpdatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9011)
                         },
                         new
                         {
                             CategoryId = 20,
-                            CreatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(1982),
+                            CreatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9013),
                             IsActive = true,
                             Name = "Mutfak Gereçleri",
                             ParentCategoryId = 2,
-                            UpdatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(1982)
+                            UpdatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9012)
                         },
                         new
                         {
                             CategoryId = 21,
-                            CreatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(1983),
+                            CreatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9014),
                             IsActive = true,
                             Name = "Temizlik Ürünleri",
                             ParentCategoryId = 2,
-                            UpdatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(1983)
+                            UpdatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9013)
                         },
                         new
                         {
                             CategoryId = 22,
-                            CreatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(1984),
+                            CreatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9015),
                             IsActive = true,
                             Name = "Aydınlatma",
                             ParentCategoryId = 2,
-                            UpdatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(1984)
+                            UpdatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9014)
                         },
                         new
                         {
                             CategoryId = 23,
-                            CreatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(1986),
+                            CreatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9016),
                             IsActive = true,
                             Name = "Beyaz Eşya",
                             ParentCategoryId = 2,
-                            UpdatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(1985)
+                            UpdatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9015)
                         },
                         new
                         {
                             CategoryId = 24,
-                            CreatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(1987),
+                            CreatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9017),
                             IsActive = true,
                             Name = "Halı ve Tekstil",
                             ParentCategoryId = 2,
-                            UpdatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(1986)
+                            UpdatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9016)
                         },
                         new
                         {
                             CategoryId = 25,
-                            CreatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(1991),
+                            CreatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9018),
                             IsActive = true,
                             Name = "Bahçe Ürünleri",
                             ParentCategoryId = 2,
-                            UpdatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(1991)
+                            UpdatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9018)
                         },
                         new
                         {
                             CategoryId = 26,
-                            CreatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(1993),
+                            CreatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9019),
                             IsActive = true,
                             Name = "Kadın Giyim",
                             ParentCategoryId = 3,
-                            UpdatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(1992)
+                            UpdatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9019)
                         },
                         new
                         {
                             CategoryId = 27,
-                            CreatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(1994),
+                            CreatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9021),
                             IsActive = true,
                             Name = "Erkek Giyim",
                             ParentCategoryId = 3,
-                            UpdatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(1993)
+                            UpdatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9020)
                         },
                         new
                         {
                             CategoryId = 28,
-                            CreatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(1995),
+                            CreatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9023),
                             IsActive = true,
                             Name = "Ayakkabı ve Çanta",
                             ParentCategoryId = 3,
-                            UpdatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(1994)
+                            UpdatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9021)
                         },
                         new
                         {
                             CategoryId = 29,
-                            CreatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(1997),
+                            CreatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9024),
                             IsActive = true,
                             Name = "Aksesuarlar",
                             ParentCategoryId = 3,
-                            UpdatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(1996)
+                            UpdatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9023)
                         },
                         new
                         {
                             CategoryId = 30,
-                            CreatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(1998),
+                            CreatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9025),
                             IsActive = true,
                             Name = "İç Giyim",
                             ParentCategoryId = 3,
-                            UpdatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(1997)
+                            UpdatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9024)
                         },
                         new
                         {
                             CategoryId = 31,
-                            CreatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(1999),
+                            CreatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9026),
                             IsActive = true,
                             Name = "Koşu ve Yürüyüş",
                             ParentCategoryId = 4,
-                            UpdatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(1998)
+                            UpdatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9025)
                         },
                         new
                         {
                             CategoryId = 32,
-                            CreatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(2000),
+                            CreatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9027),
                             IsActive = true,
                             Name = "Fitness",
                             ParentCategoryId = 4,
-                            UpdatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(2000)
+                            UpdatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9027)
                         },
                         new
                         {
                             CategoryId = 33,
-                            CreatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(2001),
+                            CreatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9028),
                             IsActive = true,
                             Name = "Outdoor",
                             ParentCategoryId = 4,
-                            UpdatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(2001)
+                            UpdatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9028)
                         },
                         new
                         {
                             CategoryId = 34,
-                            CreatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(2002),
+                            CreatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9029),
                             IsActive = true,
                             Name = "Yüzme",
                             ParentCategoryId = 4,
-                            UpdatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(2002)
+                            UpdatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9029)
                         },
                         new
                         {
                             CategoryId = 35,
-                            CreatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(2003),
+                            CreatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9030),
                             IsActive = true,
                             Name = "Bicycles",
                             ParentCategoryId = 4,
-                            UpdatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(2003)
+                            UpdatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9030)
                         },
                         new
                         {
                             CategoryId = 36,
-                            CreatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(2004),
+                            CreatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9031),
                             IsActive = true,
                             Name = "Kitaplar",
                             ParentCategoryId = 5,
-                            UpdatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(2004)
+                            UpdatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9031)
                         },
                         new
                         {
                             CategoryId = 37,
-                            CreatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(2005),
+                            CreatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9032),
                             IsActive = true,
                             Name = "Müzik CD'leri",
                             ParentCategoryId = 5,
-                            UpdatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(2005)
+                            UpdatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9032)
                         },
                         new
                         {
                             CategoryId = 38,
-                            CreatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(2006),
+                            CreatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9033),
                             IsActive = true,
                             Name = "Film DVD'leri",
                             ParentCategoryId = 5,
-                            UpdatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(2006)
+                            UpdatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9033)
                         },
                         new
                         {
                             CategoryId = 39,
-                            CreatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(2007),
+                            CreatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9034),
                             IsActive = true,
                             Name = "Bebek Giyim",
                             ParentCategoryId = 6,
-                            UpdatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(2007)
+                            UpdatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9034)
                         },
                         new
                         {
                             CategoryId = 40,
-                            CreatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(2008),
+                            CreatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9035),
                             IsActive = true,
                             Name = "Bebek Oyuncakları",
                             ParentCategoryId = 6,
-                            UpdatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(2008)
+                            UpdatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9035)
                         },
                         new
                         {
                             CategoryId = 41,
-                            CreatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(2009),
+                            CreatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9036),
                             IsActive = true,
                             Name = "Bebek Bakım Ürünleri",
                             ParentCategoryId = 6,
-                            UpdatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(2009)
+                            UpdatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9036)
                         },
                         new
                         {
                             CategoryId = 42,
-                            CreatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(2010),
+                            CreatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9037),
                             IsActive = true,
                             Name = "Cilt Bakımı",
                             ParentCategoryId = 7,
-                            UpdatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(2010)
+                            UpdatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9037)
                         },
                         new
                         {
                             CategoryId = 43,
-                            CreatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(2011),
+                            CreatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9038),
                             IsActive = true,
                             Name = "Saç Bakımı",
                             ParentCategoryId = 7,
-                            UpdatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(2011)
+                            UpdatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9038)
                         },
                         new
                         {
                             CategoryId = 44,
-                            CreatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(2012),
+                            CreatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9039),
                             IsActive = true,
                             Name = "Parfümler",
                             ParentCategoryId = 7,
-                            UpdatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(2012)
+                            UpdatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9039)
                         },
                         new
                         {
                             CategoryId = 45,
-                            CreatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(2013),
+                            CreatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9040),
                             IsActive = true,
                             Name = "Video Oyunları",
                             ParentCategoryId = 8,
-                            UpdatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(2013)
+                            UpdatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9040)
                         },
                         new
                         {
                             CategoryId = 46,
-                            CreatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(2014),
+                            CreatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9041),
                             IsActive = true,
                             Name = "Masa Oyunları",
                             ParentCategoryId = 8,
-                            UpdatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(2014)
+                            UpdatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9041)
                         },
                         new
                         {
                             CategoryId = 47,
-                            CreatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(2015),
+                            CreatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9042),
                             IsActive = true,
                             Name = "Otomobil Yedek Parçaları",
                             ParentCategoryId = 9,
-                            UpdatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(2015)
+                            UpdatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9042)
                         },
                         new
                         {
                             CategoryId = 48,
-                            CreatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(2016),
+                            CreatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9043),
                             IsActive = true,
                             Name = "Motosiklet Aksesuarları",
                             ParentCategoryId = 9,
-                            UpdatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(2016)
+                            UpdatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9043)
                         },
                         new
                         {
                             CategoryId = 49,
-                            CreatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(2017),
+                            CreatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9044),
                             IsActive = true,
                             Name = "Ofis Mobilyaları",
                             ParentCategoryId = 10,
-                            UpdatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(2017)
+                            UpdatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9044)
                         },
                         new
                         {
                             CategoryId = 50,
-                            CreatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(2018),
+                            CreatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9045),
                             IsActive = true,
                             Name = "Kırtasiye Ürünleri",
                             ParentCategoryId = 10,
-                            UpdatedAt = new DateTime(2025, 1, 15, 14, 10, 14, 782, DateTimeKind.Utc).AddTicks(2018)
+                            UpdatedAt = new DateTime(2025, 1, 15, 12, 23, 20, 351, DateTimeKind.Utc).AddTicks(9045)
                         });
                 });
 
@@ -644,14 +646,6 @@ namespace DataAccess.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("From")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ReceiverName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("SenderName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

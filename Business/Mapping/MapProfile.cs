@@ -23,6 +23,11 @@ namespace Service.Mapping
 				.ReverseMap(); 
             CreateMap<Category, UpdateCategoryDto>()
 				.ReverseMap();
-		}
+
+            CreateMap<Email, EmailDto>().ReverseMap();
+            CreateMap<Email, EmailRequest>().ReverseMap();
+            CreateMap<Email, SendEmailDto>().ReverseMap();
+
+        }
     }
 }
