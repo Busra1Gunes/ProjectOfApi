@@ -19,6 +19,7 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\CommentFoto\" />
+    <Folder Include="wwwroot\ResumeDocumets\" />
     <Folder Include="wwwroot\ProductFoto\" />
   </ItemGroup>
 

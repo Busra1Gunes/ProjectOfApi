@@ -36,7 +36,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpPost("register")]
-        [Authorize]
+      //  [Authorize]
         public ActionResult Register(UserForRegisterDto userForRegisterDto)
         {
             var userExists = _authService.UserExists(userForRegisterDto.Email);
@@ -45,11 +45,11 @@ namespace WebAPI.Controllers
                 return BadRequest(userExists.Message);
             }
 
-            var registerResult = _authService.Register(userForRegisterDto, userForRegisterDto.Password);
+            var registerResult = _authService.Register(userForRegisterDto);
             var result = _authService.CreateAccessToken(registerResult.Data);
             if (result.Success)
             {
-                return Ok(result.Data);
+                return Ok(result.Success);
             }
 
             return BadRequest(result.Message);

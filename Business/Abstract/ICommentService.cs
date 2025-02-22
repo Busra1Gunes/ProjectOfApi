@@ -23,7 +23,7 @@ namespace Business.Abstract
 
         IDataResult<Comment> GetById(int commentId);
 
-        IResult Add(CommentAddDto comment, string url);
+        IResult Add(CommentAddDto comment, string url,int kullanici_id);
         IResult Update(Comment  comment);
     }
 }

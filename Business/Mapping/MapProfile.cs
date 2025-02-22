@@ -27,6 +27,7 @@ namespace Service.Mapping
             CreateMap<Email, EmailDto>().ReverseMap();
             CreateMap<Email, EmailRequest>().ReverseMap();
             CreateMap<Email, SendEmailDto>().ReverseMap();
+            CreateMap<Resume, ResumeAddDto>().ReverseMap();
 
         }
     }
