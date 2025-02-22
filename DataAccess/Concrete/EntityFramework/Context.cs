@@ -37,5 +37,6 @@ namespace DataAccess.Concrete.EntityFramework
         public DbSet<UserOperationClaim> UserOperationClaims { get; set; }
         public DbSet<Comment> Comments { get; set; }
         public DbSet<Email> Emails { get; set; }
+        public DbSet<Resume> Resumes { get; set; }
     }
 }

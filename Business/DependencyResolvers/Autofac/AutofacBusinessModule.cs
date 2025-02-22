@@ -39,8 +39,12 @@ namespace Business.DependencyResolvers.Autofac
 
             builder.RegisterType<CommentManager>().As<ICommentService>().SingleInstance();
             builder.RegisterType<EfCommentDal>().As<ICommentDal>().SingleInstance();
+
             builder.RegisterType<EmailManager>().As<IEmailService>().InstancePerDependency();
             builder.RegisterType<EfEmailDal>().As<IEmailDal>().InstancePerDependency();
+
+            builder.RegisterType<ResumeManager>().As<IResumeService>().InstancePerDependency();
+            builder.RegisterType<EfResumeDal>().As<IResumeDal>().InstancePerDependency();
 
 
             //Bu C# kodu, Dependency Injection (Bağımlılık Enjeksiyonu) işlemi için kullanılan bir yapılandırmadır

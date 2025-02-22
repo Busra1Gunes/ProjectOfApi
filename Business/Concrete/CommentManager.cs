@@ -25,7 +25,7 @@ namespace Business.Concrete
             _mapper = mapper;
         }
 
-        public IResult Add(CommentAddDto comment, string url)
+        public IResult Add(CommentAddDto comment, string url, int kullanici_id)
         {
             // Fotoğraf yolu kaydetme işlemi
             string? sqlResimYolu = null;
@@ -67,11 +67,12 @@ namespace Business.Concrete
             }
 
             Comment comment1 = _mapper.Map<Comment>(comment);
-            comment1.fotograf = sqlResimYolu;  
+            comment1.fotograf = sqlResimYolu;
+            comment1.UserId = kullanici_id;
 
             _commentDal.Add(comment1);
 
-            return new SuccessResult(Messages.ProductAddes);
+            return new SuccessResult(Messages.CommentAddes);
         }
 
         public IDataResult<List<Comment>> GetAll()
