@@ -43,7 +43,7 @@ namespace Business.Concrete
 
             mail.From = new MailAddress(smtpUser);
             mail.To.Add(emailRequest.To);
-            mail.Subject = emailRequest.Subject;
+            mail.Subject = emailRequest.Subject; 
             mail.Body = emailRequest.Body;
             smtpClient.Port = smtpPort;
             smtpClient.Credentials = new NetworkCredential(smtpUser, smtpPass);
