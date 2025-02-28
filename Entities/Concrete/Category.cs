@@ -13,13 +13,17 @@ namespace Entities.Concrete
 		//tree-like
 		public int CategoryId { get; set; } 
 		public string Name { get; set; } = string.Empty; 
-		public string? Description { get; set; } 
-		public int? ParentCategoryId { get; set; }
+		public string? Description { get; set; }
+        /// <summary>
+        /// ParentCategoryId hangi kategorinin alt dalı olduğunu belirtir
+        /// </summary>
+        public int? ParentCategoryId { get; set; }
 		public bool IsActive { get; set; } = true; 
 		public DateTime CreatedAt { get; set; } = DateTime.UtcNow; 
 		public DateTime UpdatedAt { get; set; } = DateTime.UtcNow; 
 
 		public virtual ICollection<Category>? SubCategories { get; set; }
+		
 		public virtual Category? ParentCategory { get; set; }
 	}
 }

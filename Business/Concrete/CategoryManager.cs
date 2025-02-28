@@ -70,7 +70,11 @@ namespace Business.Concrete
 			return new SuccessDataResult<CategoryDto>(categoryDtos, Messages.CategoryListed); 
 		}
 
-
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="parentCategoryId">id'ye karşılık gelen kategorileri listeler</param>
+		/// <returns></returns>
 		public IDataResult<List<Category>> GetSubCategories(int parentCategoryId)
 		{
 			var subCategories = _categoryDal.GetAll(c => c.ParentCategoryId == parentCategoryId); // Alt kategoriler alınır.
