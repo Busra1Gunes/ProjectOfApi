@@ -51,6 +51,10 @@ namespace Business.Concrete
 
         private async Task<IResult> SendEmail(SendEmailDto sendEmailDto)
         {
+            try
+            {
+                // Here you can implement the real email sending logic using a library or API.
+                // For example, using SMTP or any other service.
 
 
             string smtpServer = "smtp.gmail.com";
@@ -77,7 +81,13 @@ namespace Business.Concrete
             email.ReceiverName = "";    
             _emailDal.Add(email);
             return new SuccessResult(Messages.MailSended);
-            
+
+                return new SuccessResult("Email sent successfully.");
+            }
+            catch (Exception ex)
+            {
+                return new ErrorResult($"Error sending email: {ex.Message}");
+            }
         }
 
         public IDataResult<List<EmailDto>> GetAllEmailsAsync()

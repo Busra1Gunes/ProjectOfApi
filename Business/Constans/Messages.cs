@@ -52,8 +52,8 @@ namespace Business.Constans
 		// Bir kategorinin alt kategorileri başarıyla listelendiğinde döndürülen bilgilendirme mesajıdır.
 
 		public static string CategoryUpdated = "Kategori başarıyla güncellendi.";
-        // Bir kategori başarıyla güncellendiğinde döndürülen bilgilendirme mesajıdır.
+		// Bir kategori başarıyla güncellendiğinde döndürülen bilgilendirme mesajıdır.
 
         public static string MailSended = "Mail Gönderildi";
-    }
+	}
 }
