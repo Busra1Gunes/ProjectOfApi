@@ -1,0 +1,18 @@
+﻿using Microsoft.IdentityModel.Tokens;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Core.Utilities.Security.Encrytion
+{
+    public class SecurityKeyHelper
+    {
+        //appsetting.json daki SecurityKey'i byte haline çevirir
+        public static SecurityKey CreateSecurityKey(string securityKey)
+        {
+            return new SymmetricSecurityKey(Encoding.UTF8.GetBytes(securityKey));
+        }
+    }
+}
