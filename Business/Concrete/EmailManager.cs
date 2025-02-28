@@ -33,6 +33,7 @@ namespace Business.Concrete
 
         public IResult SendEmailAsync(EmailRequest emailRequest)
         {
+
             string smtpServer = "smtp.gmail.com";
             int smtpPort = 587;
             string smtpUser = "";
