@@ -18,7 +18,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> SendEmail([FromForm] EmailRequest emailRequest)
+        public async Task<IActionResult> SendEmail([FromForm] SendEmailDto emailRequest)
         {
             try
             {

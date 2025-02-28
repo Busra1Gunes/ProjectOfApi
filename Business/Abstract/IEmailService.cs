@@ -11,7 +11,8 @@ namespace Business.Abstract
 {
     public interface IEmailService
     {
-        IResult SendEmailAsync(EmailRequest emailRequest);
-        IResult CreateAsync(EmailRequest emailRequest);
+        IResult SendEmailAsync(SendEmailDto sendEmailDto);
+        IDataResult<List<EmailDto>> GetAllEmailsAsync();
+        IDataResult<EmailDto> GetEmailByIdAsync(int emailId);
     }
 }
