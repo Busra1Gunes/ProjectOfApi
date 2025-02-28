@@ -77,7 +77,7 @@ namespace Business.Concrete
             email.ReceiverName = "";    
             _emailDal.Add(email);
             return new SuccessResult(Messages.MailSended);
-           
+            
         }
 
         public IDataResult<List<EmailDto>> GetAllEmailsAsync()
